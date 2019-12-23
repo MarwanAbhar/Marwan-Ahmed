@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/design.css" />
+</head>
+</html>
+
+<body>
+    <section class="page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text">
+                    <h1>My Phonebook</h1>
+                    <h3>Registration</h3>
+                    <button class="btn btn-danger" id="hide">Hide</button>
+                    
+                    </div>
+                    <form class="form" id="formtable">
+                        <div class="form-group">
+                            <label for="exampleInputname">Name</label>
+                            <input onblur="validateName()" type="text" class="form-control" id="Inputname"><br>
+                            <div id="namealert"class="alert alert-danger" role="alert" >Please enter correct name.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input onblur="validateEmail()" type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"><br>
+                            <div id="emailalert" class="alert alert-danger" role="alert">Please enter correct email.</div>
+                        </div>
+                        <div class="form-group">
+                            <label  for="examplephone1">Phone</label>
+                            <input onblur="validatePhone()" type="text" class="form-control" id="phone"><br>
+                            <div id="phonealert" class="alert alert-danger" role="alert">Please enter valid phone number.</div>
+                        </div>
+                        <div class="form-group">
+                            <label  for="examplenumber1">Age</label>
+                            <input onblur="validateAge()" type="text" class="form-control" id="age"><br>
+                            <div id="agealert" class="alert alert-danger" role="alert">Please enter valid age.</div>
+                        </div>
+                        <button class="btn btn-secondary" id="submit" onclick="addUser(event)">Add</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div id="leftcol">
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <script src="js/jquery-3.3.1.min.js"></script>		
+           <script src="js/popper.min.js"></script>			
+           <script src="js/bootstrap.min.js"></script>
+           <script src="js/all.min.js"></script>
+           <script src="js/code.js"></script>
+
+
+</body>
+</html>
+
